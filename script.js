@@ -14,7 +14,10 @@ saveBtn.addEventListener('click', save);
 const show = function() {
 
     const savedValue = localStorage.getItem('username');
-    showUser.innerText = savedValue ? savedValue : '';
+    if (savedValue) {
+        showUser.innerText = savedValue ? savedValue : '';
+    }
+   
 
 }
 
